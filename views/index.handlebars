@@ -4,6 +4,24 @@
             <h1 class="display-3 mt-3 pt-5">
                 Web Development Ebook
             </h1><p class="lead">learn web development front to back</p>
+            <form action="/charge" method="POST">
+                <script
+                    src="https://checkout.stripe.com/checkout.js"
+                    class="stripe-button"
+                    data-key="{{stripePublishableKey}}"
+                    data-amount = "2500"
+                    data-name = "web development ebook"
+                    data-description = "ebook written by brad traversy"
+                    data-image= "/img/marketplace.png"
+                    data-locale = "auto" >
+                </script>
+                <script>
+                    //hide DEFAULT stripe buttoon
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                </script>
+                    <button type="submit" class="btn btn-outline-dark text-white btn-lg"> Purchase for $25 </button>
+            </form>
+       
         </div>
 
         <div class="col-md-6">
