@@ -81,7 +81,7 @@ app.post('/signup', (req,res) => {
         url:  'https://us1.api.mailchimp.com/3.0/lists/d778c1f68e',
         method: 'POST',
         headers:{
-            Authorization: 'auth 1efa95a431712629b9d2a036baac0c92-us1'
+            Authorization: keys.mailchimpKey
         },
         body: postData
     }
@@ -103,7 +103,7 @@ app.post('/signup', (req,res) => {
 })
 
 const port = process.env.port || 5000
-
+gi
 
 
 
